@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Charm');  /* in order to get  a specific font you can get it at font.google.com then search for the font then click the plus sign then a thing will pop up at the bottom then click that and then click on import and copy the @import until the ; */
+
+body{
+  font-family: 'Charm', cursive; /* for the body font u can use the same font by going to the bottom pop up "family selected" and copy the Specify in CSS thats in the gray */
+  margin:0; /* take off any extra spacing on the edges of the site*/
+  background: #eee;
+  height: auto;
+}
+
+h1{  /* we only have 1 h1 in the html which is the title of the page but if you have multiple things as h1 in html then you can specify which one by putting for example #landingh1 or which every one that has the h1 you want to change*/
+  font-weight: 400;
+  font-size: 2.5rem; /* rem is whatever the  core html size is which is default 16px times rem, so 1 rem is 16px, so 2.5rem times 16px is 40px*/
+  text-transform: uppercase; /* uppercase makes all the letters in that section uppercase*/
+  margin:0; /* takes off the spacing on top */
+}
+
+h2{
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: capitalize; /* capitalize means the first letter of each word is capitalize*/
+  margin: 0;
+}
+
+img{ /* refering to all img and the block and width makes the image stay with in the container which is the website depending on how large or small you have the screen instead of having a small screen and large imgs*/
+  display: block;
+  width: 100%;
+}
+
+main{
+  max-width: 900px; /* making the images stay within 900px max*/
+  margin:auto; /* makes the ims centered of the web page and not max size all the way from one end to the other*/
+  box-shadow: 30px 0 40px rgba(0,0,0,0.4), /* (referring to the right and left of the website)there are differet in box-shadow which are: 30px is for horizontal offset/ 0px vertical offset/40px for blur/ rgba which is the color. rgba stands for (red,green,blue, transparency or the opacity)- the opacity you can make it light by 0.1 or darker 0.4*/
+  -30px 0px 40px rgba(0, 0, 0, 0.4); /* then referring to the top and bottom of the website you eed to put a , then input the details*/
+}
+
+#landing{
+  background: #fff
+}
+
+#landing-text{
+  display: flex;
+  flex: 0 1 40vw; /* (0=grow, 1=shrink, 40vw= width. vw=viewport width) (for flex property)*/
+  height: 50vh; /* for the spacing between photo one and main page*/
+  justify-content: center; /* to align the landing text to the center horizontally, but we also want to do it vertically which is below*/
+  align-items: center; /* align vertically*/
+  text-align: center; /* moves the wording to center*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#landing-text h2{
+  color:#888;
+}
+
+#landing-image{
+  background: url(https://source.unsplash.com/De8wMYoSSBc); /* this is to add the main page image, so you will need to go on source.unsplash.com then go to specific photo and only copy"https://source.unsplash.com/" then go to unsplash.com and
+  search for the image in this case samsung and click on the image and in the website link copy just the image id part in the link not the whole link and paste after / in this link pasted on here. however u wont see it until you add the heights below*/
+  background-position: center; /* postion the img to center*/
+  background-size: cover; /* for the img to cover the whole size we set*/
+  background-repeat:no-repeat;
+  height: 50vh; /* 50 vh meaning we want it to take half of the height on the main page so it looks like its divided into 2*/
+  flex: 0 1 60vw; /* flex 0 1 is a default and the 60vw is to have the image width 60 to show the image better width wise*/
+  margin: 0;
+}
+.btn{
+  padding:0.5rem 2rem; /* top and bottom= 0.5 rem/right and left=2rem (padding adds the spacing in the box of the word view work, with no padding the the box would be really close to the word view work)*/
+  border:1px #ccc solid;
+  display: inline-block; /* make the view work box top part not go on the words above it and leaves spacing in between the top part of the box*/
+  margin: 2rem 0 0;
+  border-radius: 50px; /* to make the view work button curvy and not pointy*/
+  text-decoration: none; /* to take of the link line that was under the word view work*/
+  color: #333; /* change the color of view work from default blue to almost black color*/
+  transition: background 800ms ease; /* to make the button color fade in really quick. background which is referring to the background,500ms( half a second)but i put 800ms, ease- to ease in smoothly*/
+}
+
+.btn:hover{ /* to make the button change color when you hover over it*/
+  background: #f4f4f4;
+}
+
+#header {
+  padding: 1.5rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+#header h2{
+  border-left: dotted 1px #fff;
+  border-right: dotted 1px #fff;
+  display: inline-block; /* to make the dotted border that we created above come closer in to the word our work since by default the dotted is spread out like a box however they become too close to the word so we add padding like shown below*/
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.caption{
+  padding:0.8rem;
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+  padding: 2rem 1rem; /*top-bottom/ left-right*/
+  margin: auto;
+  color: #333;
+}
+
+footer h3{
+  font-size: 3rem;
+  margin-bottom: 0; /* to make the spacing(margin) not too big between get in touch and the contact info under it*/
+}
+/* screen sizes 500px and up*/
+@media(min-width:500px) {
+  #landing {
+    display:flex;
+    height:100;
+  }
+  #landing-text{
+  height: 100vh; /* this is to make the whole page appear as main instead of how it was which was showing our work, but now you have to scroll down to see our work but we woudl have to fix the main image to go through out the main page too such as below:*/
+  }
+  #landing-image{
+    height: 100vh; /* to make image go throughout the main page as well. we use vh instead of % because vh is 100 slices going height wise within that block area on the main not the whole page such as %, vh is npt a fixed px it moves when you make the website big or small */
+  }
+  /* screen sizes 700px and up*/
+  @@media (min-width: 700px) {
+    .btn {
+      padding: 1rem 3rem;
+    }
+
+  }
+}
